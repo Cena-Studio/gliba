@@ -3,10 +3,8 @@
 ## 1 Description
 Gliba.js is a front-end beautification library that creates dynamic background effects for webpage elements. Supporting both plain JavaScript syntax and jQuery syntax, it is incredibly easy to use. To apply it, all you need to know is only one function: `Gliba.initialize()`. Or, for jQuery, `$(Selector).gliba()`. The free combination of multiple optional parameters provides rich possibilities for customizing unique effects. In this quick tutorial, you will learn everything about this library.
 ***
-***
 ## 2 Official Website
 [Gliba.js | Cena Lab https://lab.cena.cool/gliba/](https://lab.cena.cool/gliba/)
-***
 ***
 ## 3 Basic Usage
 Like other libraries of this type, the very first step is to insert the script tag of Gliba.js into the head of your HTML document.
@@ -32,7 +30,6 @@ $("body").gliba(
     ["image url 1", "image url 2", ..., "image url n"]
 );
 ```
-***
 ***
 ## 4 Advanced Usage
 Instead of passing an array into the method, you can also pass a config object. The example of an complete configuration is shown below. Note that the properties inside, except "resource", are optional so that you can choose which ones to include, and the rest will be automatically set to "default".
@@ -67,7 +64,6 @@ $(selector).gliba(
 );
 ```
 In the following subsections, the properties will be explained in detail.
-***
 ### 4.1 Property: resource
 "resource" is the only required property for the config object. It could be the most complicated property as well. Despite the value is always an array, the elements of the resource array could be arrays, strings, image objects, or a even more complex combination of them. All this will be clear by understanding the following examples.
 
@@ -147,7 +143,6 @@ Gliba.initialize(
     ]
 )
 ```
-***
 ### 4.2 Property: container
 This property specifies which element the background applies to. It takes either an HTMLElement or an HTMLElementCollection as the value.
 ``` JavaScript
@@ -177,7 +172,6 @@ $(selector).gliba(
     }
 )
 ```
-***
 ### 4.3 Property: direction
 This property specifies on which axis the background is sensitive to mouse movement. The value it takes can be "horizontal", "vertical", or "both".
 ``` JavaScript
@@ -210,7 +204,6 @@ Gliba.initialize(
     }
 );
 ```
-***
 ### 4.4 Property: speed
 This property specifies the time it takes for the background to move to its new resting position. When using this property, please include the unit of time measurement in the value.
 ``` JavaScript
@@ -233,7 +226,6 @@ Gliba.initialize(
     }
 );
 ```
-***
 ### 4.5 Property: amplitude
 This property indicates the amount of movement of the background. It takes values of type number from 1 to 9. A larger number represents greater movement.
 ``` JavaScript
@@ -256,7 +248,6 @@ Gliba.initialize(
     }
 );
 ```
-***
 ### 4.6 Property: depth
 This property also affects the movement range. However, different from "amplitude", "depth" simulates the distance between background layers. It also takes values of type number from 1 to 9. A larger number represents greater movement.
 ``` JavaScript
@@ -279,7 +270,6 @@ Gliba.initialize(
     }
 );
 ```
-***
 ### 4.7 Property: reverse
 This property takes a boolean value to determine whether to move in the same or the opposite direction as the cursor. Contrary to conventional ideas, the examples below demonstrates some interesting effects that could be created with this property.
 ``` JavaScript
@@ -302,7 +292,6 @@ Gliba.initialize(
     }
 );
 ```
-***
 ### 4.8 Property: rebound
 This property determines whether the background bounces back to its original position when the mouse cursor leaves the element. It takes a boolean value.
 ``` JavaScript
@@ -325,7 +314,6 @@ Gliba.initialize{
     }
 }
 ```
-***
 ### 4.9 Property: preload
 This property accepts a boolean value to determines whether to show the background after all the resources has been loaded. Generally it is not recommended to change this property since it may cause unsafe background display process when resources are being loaded if the value is set to false.
 ``` JavaScript
@@ -337,4 +325,3 @@ Gliba.initialize{
     }
 }
 ```
-***
