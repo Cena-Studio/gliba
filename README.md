@@ -1,11 +1,8 @@
 # Gliba.js Quick Tutorial
-***
 ## 1 Description
 Gliba.js is a front-end beautification library that creates dynamic background effects for webpage elements. Supporting both plain JavaScript syntax and jQuery syntax, it is incredibly easy to use. To apply it, all you need to know is only one function: `Gliba.initialize()`. Or, for jQuery, `$(Selector).gliba()`. The free combination of multiple optional parameters provides rich possibilities for customizing unique effects. In this quick tutorial, you will learn everything about this library.
-***
 ## 2 Official Website
-[Gliba.js | Cena Lab https://lab.cena.cool/gliba/](https://lab.cena.cool/gliba/)
-***
+### [Gliba.js | Cena Lab https://lab.cena.cool/gliba/](https://lab.cena.cool/gliba/)
 ## 3 Basic Usage
 Like other libraries of this type, the very first step is to insert the script tag of Gliba.js into the head of your HTML document.
 ``` HTML
@@ -30,7 +27,6 @@ $("body").gliba(
     ["image url 1", "image url 2", ..., "image url n"]
 );
 ```
-***
 ## 4 Advanced Usage
 Instead of passing an array into the method, you can also pass a config object. The example of an complete configuration is shown below. Note that the properties inside, except "resource", are optional so that you can choose which ones to include, and the rest will be automatically set to "default".
 ``` JavaScript
