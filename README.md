@@ -2,7 +2,7 @@
 ## 1 Description
 Gliba.js is a front-end beautification library that creates dynamic background effects for webpage elements. Supporting both plain JavaScript syntax and jQuery syntax, it is incredibly easy to use. To apply it, all you need to know is only one function: `Gliba.initialize()`. Or, for jQuery, `$(Selector).gliba()`. The free combination of multiple optional parameters provides rich possibilities for customizing unique effects. In this quick tutorial, you will learn everything about this library.
 ## 2 Official Website
-### [Gliba.js | Cena Lab https://lab.cena.cool/gliba/](https://lab.cena.cool/gliba/)
+### [Gliba.js | Dev | Cena Studio https://dev.cena.cool/gliba/](https://dev.cena.cool/gliba/)
 ## 3 Basic Usage
 Like other libraries of this type, the very first step is to insert the script tag of Gliba.js into the head of your HTML document.
 ``` HTML
@@ -61,9 +61,9 @@ $(selector).gliba(
 ```
 In the following subsections, the properties will be explained in detail.
 ### 4.1 Property: resource
-"resource" is the only required property for the config object. It could be the most complicated property as well. Despite the value is always an array, the elements of the resource array could be arrays, strings, image objects, or a even more complex combination of them. All this will be clear by understanding the following examples.
+"resource" is the only required property for the config object. It could be the most complicated property as well. Despite its value is always an array, the elements of the resource array could be arrays, strings, image objects, or a even more complex combination of them. All this will be clear by understanding the following examples.
 
-The first example looks almost the same as what we did in section 3. The background will have 4 layers. Each layer has 1 image, specified by the path provided as a string.
+The first example does exactly the same thing as in section 3. The background will have 4 layers. Each layer has 1 image, specified by the path provided as a string.
 ``` JavaScript
 // a resource array with a simple and practical structure
 Gliba.initialize(
@@ -75,9 +75,9 @@ Gliba.initialize(
                         "image url 4"
                     ]
     }
-)
+);
 ```
-In some scenarios, we may want to customize the blend mode of these images. The image object is thus introduced. Based on the above example, the following code specified the blend mode of the 1st and the 4th image. The former is set to "normal" while the latter is set to "color-dodge".
+In some scenarios, we may want to customize the blend mode of these images. The image object is thus introduced. Based on the above example, the following code specifies the blend mode of the 1st and the 4th image. The former is set to "normal" while the latter is set to "color-dodge".
 ``` JavaScript
 // a resource array with the blend mode of the 1st and 4th images customized
 Gliba.initialize(
@@ -95,7 +95,7 @@ Gliba.initialize(
                         }
                     ]
     }
-)
+);
 ```
 In other scenarios, we may want to create even more gorgeous background so that we hope to use multiple images to composite a single layer. This can be easily achived by including image resources of the same layer into an array. As shown below, the 1st and 2nd images together form the first layer.
 ``` JavaScript
@@ -117,7 +117,7 @@ Gliba.initialize(
                         }
                     ]
     }
-)
+);
 ```
 Now it is already a very complex resource. Looking back at section 3, if other properties are not specified, the above config object can be simplified as the following format.
 ``` JavaScript
@@ -137,7 +137,7 @@ Gliba.initialize(
             "blendMode": "color-dodge"
         }
     ]
-)
+);
 ```
 ### 4.2 Property: container
 This property specifies which element the background applies to. It takes either an HTMLElement or an HTMLElementCollection as the value.
@@ -148,7 +148,7 @@ Gliba.initialize(
         "resource": [],
         "container": document.getElementById("myid")
     }
-)
+);
 ```
 ``` JavaScript
 // the background effect applies to every "myclass" element.
@@ -157,7 +157,7 @@ Gliba.initialize(
         "resource": [],
         "container": document.getElementsByClassName("myclass")
     }
-)
+);
 ```
 As mentioned before, this property is redundant for jQuery. 
 ``` JavaScript
@@ -166,7 +166,7 @@ $(selector).gliba(
     {
         "resource": []
     }
-)
+);
 ```
 ### 4.3 Property: direction
 This property specifies on which axis the background is sensitive to mouse movement. The value it takes can be "horizontal", "vertical", or "both".
@@ -292,32 +292,32 @@ Gliba.initialize(
 This property determines whether the background bounces back to its original position when the mouse cursor leaves the element. It takes a boolean value.
 ``` JavaScript
 // a background that won't rebound
-Gliba.initialize{
+Gliba.initialize(
     {
         "resource": [],
         "container": document.getElementById("rebound_false"),
         "rebound": false
     }
-}
+);
 ```
 ``` JavaScript
 // a background that can rebound
-Gliba.initialize{
+Gliba.initialize(
     {
         "resource": [],
         "container": document.getElementById("rebound_true"),
         "rebound": true
     }
-}
+);
 ```
 ### 4.9 Property: preload
 This property accepts a boolean value to determines whether to show the background after all the resources has been loaded. Generally it is not recommended to change this property since it may cause unsafe background display process when resources are being loaded if the value is set to false.
 ``` JavaScript
 // preloading disabled
-Gliba.initialize{
+Gliba.initialize(
     {
         "resource": [],
         "preload": false
     }
-}
+);
 ```
